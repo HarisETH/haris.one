@@ -3,6 +3,10 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Hero from '@/components/Hero'
+import Socials from '@/components/Socials'
+import Current from '@/components/Current'
+import Footer from '@/components/Footer'
+
 
 // const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +25,12 @@ export default function Home() {
 
       <main className={`min-h-screen w-full antialiased font-inter`}>
         <Hero />
+       
+        <Socials />
+
+        <Current />
+
+        <Footer />
       </main>
     </>
   )

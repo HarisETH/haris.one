@@ -29,7 +29,7 @@ function Hero() {
       </div>
 
       <div className="intro flex flex-col gap-4 md:gap-5">
-        <p className="intro font-cormorant text-2xl md:text-2xl font-bold text-black">
+        <p className="intro font-cormorant text-2xl md:text-2xl font-medium text-black">
           I am a 18-year-old Physics student with a strong interest in web
           development and emerging technologies. I am also a content creator on
           Instagram and Twitter where I share my projects and explore the latest
