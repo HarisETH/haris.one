@@ -1,4 +1,7 @@
 import React from "react";
+// import FeatherIcon from 'feather-icons-react';
+// import { Close } from 'feather-icons-react';
+import * as Icon from 'react-feather';
 
 function Hero() {
   return (
@@ -14,16 +17,24 @@ function Hero() {
           Haris <br /> Kumar N
         </h2>
         <div className="handles flex gap-2">
-          <div className="w-8 h-8 bg-gray-900 rounded-full"></div>
-          <div className="w-8 h-8 bg-gray-900 rounded-full"></div>
-          <div className="w-8 h-8 bg-gray-900 rounded-full"></div>
-          <div className="w-8 h-8 bg-gray-900 rounded-full"></div>
-          <div className="w-8 h-8 bg-gray-900 rounded-full"></div>
+          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full linkedin flex justify-center items-center p-1">
+            <Icon.Linkedin className="text-gray-100" />
+          </a>
+          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full instagram flex justify-center items-center p-1">
+            <Icon.Instagram className="text-gray-100" />
+          </a>
+          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full twitter flex justify-center items-center p-1">
+            <Icon.Twitter className="text-gray-100" />
+          </a>
+          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full github flex justify-center items-center pt-1.5 p-1">
+            <Icon.GitHub className="text-gray-100" />
+          </a>
+          {/* <div className="w-8 h-8 bg-gray-900 rounded-full "></div> */}
         </div>
         <div className="tags flex flex-col gap-1 text-md  text-black font-semibold tracking-tight  ">
           <p className="bg-gray-200 px-2 w-fit rounded-md">Web Developer</p>
           <p className="bg-gray-200 px-2 w-fit rounded-md">Content Creator</p>
-          <p className="bg-gray-200 px-2 w-fit rounded-md">Physics Undergraduate</p>
+          <p className="bg-gray-200 px-2 w-fit rounded-md ">Physics Undergraduate</p>
           <p className="bg-gray-200 px-2 w-fit rounded-md">Designer</p>
         </div>
       </div>

@@ -14,14 +14,18 @@ const Socials = () => {
             <a href="">Instagram</a>
             <div className="flex items-center gap-2">
               <p>1500+</p>
-              <div className="loader w-24 h-2 rounded-full bg-black"></div>
+              <div className="loader w-24 h-1.5 rounded-full bg-blue-200 relative">
+                <div className="absolute bg-blue-600 w-20 h-1.5 rounded-full"></div>
+              </div>
             </div>
           </div>
           <div className="twitter flex items-center justify-between">
             <a href="">Twitter</a>
             <div className="flex items-center gap-2">
               <p>250+</p>
-              <div className="loader w-24 h-2 rounded-full bg-black"></div>
+              <div className="loader w-24 h-1.5 rounded-full bg-blue-200 relative">
+                <div className="absolute bg-blue-600 w-10 h-1.5 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
