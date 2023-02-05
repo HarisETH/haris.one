@@ -17,7 +17,7 @@ function Hero() {
           Haris <br /> Kumar N
         </h2>
         <div className="handles flex gap-2">
-          <a href="https://www." className="w-9 p-2 md:w-12 md:h-12 md:p-1 h-9 bg-gray-900 rounded-full linkedin flex justify-center items-center dark:border-2 border-gray-300 ">
+          <a href="https://www." className="w-9 p-2 md:w-12 md:h-12 md:p-1 h-9 bg-gray-900 rounded-full linkedin flex justify-center items-center dark:border-2 dark:border-gray-300 ">
             <Icon.Linkedin className="text-gray-100" />
           </a>
           <a href="https://www." className="w-9 p-2 md:w-12 md:h-12 md:p-1 h-9 bg-gray-900 rounded-full instagram flex justify-center items-center dark:border-2 border-gray-300 ">
