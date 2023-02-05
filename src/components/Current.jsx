@@ -3,7 +3,7 @@ import React from "react";
 const Current = () => {
   return (
     <div
-      className={`px-12 pt-20 flex flex-col md:pt-32 md:px-32 justify-center  items-center tracking-tighter gap-20`}
+      className={`px-8 pt-20 flex flex-col md:pt-32 md:px-32 justify-center  items-center tracking-tighter gap-20`}
     >
       <div className="second-coat w-full md:max-w-5xl flex flex-col gap-8 md:gap-16">
         <h4 className="text-5xl font-black">Currently...</h4>
@@ -18,7 +18,7 @@ const Current = () => {
           <p className="font-cormorant font-medium text-2xl">
             Currently Building{" "}
             <a
-              className="text-blue-600"
+              className="text-blue-600 font-semibold"
               href="https://github.com/hariseth/gravity"
             >
               @Gravity

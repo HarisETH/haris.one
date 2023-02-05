@@ -2,7 +2,7 @@ import React from "react";
 
 const Socials = () => {
   return (
-    <div className="px-12 pt-20 flex flex-col md:pt-32 md:px-32 w-full justify-center items-center tracking-tighter gap-20">
+    <div className="px-8 pt-20 flex flex-col md:pt-32 md:px-32 w-full justify-center items-center tracking-tighter gap-20">
       <div className="secondary-cover flex flex-col max-w-5xl gap-10">
         <h3 className="text-5xl font-black">My Digital Footprint</h3>
         <p className="font-cormorant font-medium text-2xl">

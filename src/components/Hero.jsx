@@ -5,28 +5,28 @@ import * as Icon from 'react-feather';
 
 function Hero() {
   return (
-    <section className="px-12 pt-24 font-primary-light-theme flex flex-col gap-16 tracking-tighter pb-4 md:pt-32 md:px-32 w-full justify-center items-center">
+    <section className="px-8 pt-24 font-primary-light-theme flex flex-col gap-16 tracking-tighter pb-4 md:pt-32 md:px-32 w-full justify-center items-center">
       <h1 className="font-black text-5xl md:text-7xl max-w-5xl leading-none">
         Exploring physics and coding, pushing boundaries in both worlds —
         endlessly exploring the laws of nature and the web
       </h1>
 
-      <div className="flex flex-col gap-16 md:flex-row max-w-5xl">
+      <div className="flex flex-col gap-8 lg:gap-24 md:flex-row max-w-5xl">
       <div className="about flex flex-col gap-4">
         <h2 className="text-3xl leading-9 font-black">
           Haris <br /> Kumar N
         </h2>
         <div className="handles flex gap-2">
-          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full linkedin flex justify-center items-center p-1">
+          <a href="https://www." className="w-9 p-2 md:w-12 md:h-12 md:p-1 h-9 bg-gray-900 rounded-full linkedin flex justify-center items-center ">
             <Icon.Linkedin className="text-gray-100" />
           </a>
-          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full instagram flex justify-center items-center p-1">
+          <a href="https://www." className="w-9 p-2 md:w-12 md:h-12 md:p-1 h-9 bg-gray-900 rounded-full instagram flex justify-center items-center ">
             <Icon.Instagram className="text-gray-100" />
           </a>
-          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full twitter flex justify-center items-center p-1">
+          <a href="https://www." className="w-9 p-2 md:w-12 md:h-12 md:p-1 h-9 bg-gray-900 rounded-full twitter flex justify-center items-center">
             <Icon.Twitter className="text-gray-100" />
           </a>
-          <a href="https://www." className="w-12 h-12 bg-gray-900 rounded-full github flex justify-center items-center pt-1.5 p-1">
+          <a href="https://www." className="w-9 p-2 md:w-12 md:h-12 md:p-1 h-9 bg-gray-900 rounded-full github flex justify-center items-center ">
             <Icon.GitHub className="text-gray-100" />
           </a>
           {/* <div className="w-8 h-8 bg-gray-900 rounded-full "></div> */}
@@ -39,8 +39,8 @@ function Hero() {
         </div>
       </div>
 
-      <div className="intro flex flex-col gap-4 md:gap-5">
-        <p className="intro font-cormorant text-2xl md:text-2xl font-medium text-black">
+      <div className="intro flex flex-col gap-4 md:gap-5 ">
+        <p className="intro font-cormorant text-2xl break-words md:text-2xl font-medium text-black ">
           I am a 18-year-old Physics student with a strong interest in web
           development and emerging technologies. I am also a content creator on
           Instagram and Twitter where I share my projects and explore the latest
