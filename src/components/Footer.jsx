@@ -26,7 +26,7 @@ const Footer = () => {
 
       <div className="last-line flex justify-center items-center py-6 px-8 md:px-32">
         <div className="cover w-full md:max-w-5xl flex justify-between items-center">
-          <p className="font-bold italic">haris.one</p>
+          <p className="font-bold italic ">haris.one</p>
           <div className="flex gap-3">
             <a href="mailto:hariskumar.eth@proton.me" className="p-2 rounded-full border-gray-200 flex justify-center items-center w-full h-full border-2">
               <Icon.Mail className="h-4 w-4 md:w-7 md:h-7"  />
