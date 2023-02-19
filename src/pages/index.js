@@ -6,10 +6,25 @@ import Hero from "@/components/Hero";
 import Socials from "@/components/Socials";
 import Current from "@/components/Current";
 import Footer from "@/components/Footer";
+import Loading from "./loading/Loading";
+import { useEffect, useState } from "react";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const[visib, setVisib] = useState('h-screen overflow-hidden');
+  useEffect(() => {
+    
+      setTimeout(function () {
+        setVisib('')
+        
+        
+      }, 2000);
+
+    
+  }, []);
+
   return (
     <>
       <Head>
@@ -33,13 +48,17 @@ export default function Home() {
       </Head>
 
       <main className={`min-h-screen w-full antialiased font-inter`}>
-        <Hero />
+        <Loading />
 
-        <Socials />
+        <section className={visib}>
+          <Hero />
 
-        <Current />
+          <Socials />
 
-        <Footer />
+          <Current />
+
+          <Footer />
+        </section>
       </main>
     </>
   );
