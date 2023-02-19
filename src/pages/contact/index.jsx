@@ -4,7 +4,7 @@ import * as Icon from "react-feather";
 import emailjs from '@emailjs/browser';
 // UI imports
 
-import { Input, Spacer, useInput, Textarea } from "@nextui-org/react";
+import { Input, Modal, useInput,Text , Row, Checkbox, Button , Textarea } from "@nextui-org/react";
 
 
 
@@ -16,7 +16,8 @@ const index = () => {
   const [twitterid, setTwitter] = useState("");
   const [ emailid, setEmailId ] = useState("");
 
-
+  const [visible, setVisible] = useState(false);
+  const handler = () => setVisible(true);
 
   const { value, reset, bindings } = useInput("");
   const validateEmail = (value) => {
@@ -37,7 +38,10 @@ const index = () => {
     };
   }, [value]);
 
-  
+  const closeHandler = () => {
+    setVisible(false);
+    console.log("closed");
+  };
 
 
 
@@ -45,7 +49,10 @@ const index = () => {
   function contactSender(e){
     e.preventDefault()
 
-    console.log(process.env.EMAIL_KEY)
+   handler()
+
+  
+
 
     let template_params = {
       "name": senderName,
@@ -53,7 +60,7 @@ const index = () => {
       "message": message_value,
       "twitter_id": twitterid
     }
-    console.log(template_params)
+    
     let service_id = "service_phfssuo";
     let template_id = "template_hp2x6yb";
     emailjs.send(service_id, template_id, template_params, process.env.EMAIL_KEY);
@@ -139,6 +146,44 @@ const index = () => {
             </button>
             
           </form>
+
+          <Modal
+          className="font-inter"
+          
+          css={{
+            background: 'rgb(59 130 246)',
+            color: 'white'
+          }}
+        closeButton
+        aria-labelledby="modal-title"
+        open={visible}
+        onClose={closeHandler}
+      >
+        <Modal.Header css={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'start',
+          
+        }} >
+          <Icon.Info ></Icon.Info>
+          <p className="font-bold  tracking-wide px-2 text-white text-2xl">Send Successful</p>
+        </Modal.Header>
+
+        <Modal.Body>
+          <p className="text-xl  font-normal text-white">
+            You're Raven has been successfully sent! You will receive a reply within a day. Have a great day ahead !
+          </p>
+        </Modal.Body>
+        
+        <Modal.Footer>
+         
+          <Button auto onPress={closeHandler}>
+            Sure, Continue!
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
+
         </section>
       </section>
     </main>
