@@ -11,9 +11,9 @@ import { useEffect, useState } from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
-
+//h-screen overflow-hidden
 export default function Home() {
-  const[visib, setVisib] = useState('h-screen overflow-hidden');
+  const[visib, setVisib] = useState('');
   useEffect(() => {
     
       setTimeout(function () {
@@ -48,7 +48,7 @@ export default function Home() {
       </Head>
 
       <main className={`min-h-screen w-full antialiased font-inter`}>
-        <Loading />
+        {/* <Loading /> */}
 
         <section className={visib}>
           <Hero />
