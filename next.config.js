@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
 
-module.exports = nextConfig
+module.exports = {
+  env:{
+    EMAIL_KEY : process.env.EMAIL_KEY
+  },
+}

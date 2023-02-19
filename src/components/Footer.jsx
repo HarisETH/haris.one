@@ -1,5 +1,6 @@
 import React from "react";
 import * as Icon from 'react-feather';
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -7,7 +8,7 @@ const Footer = () => {
       <footer className="pt-12 px-8 font-inter text-lg flex flex-col md:px-32 justify-center items-center space-y-10">
         <div className="flex justify-between items-center w-full md:max-w-5xl">
           <div className="contact flex flex-col gap-3">
-            <p className="font-bold text-xl">Contact</p>
+            <Link href={"/contact"} className="font-bold text-xl">Contact</Link>
             <a href="">E-Mail</a>
             <a href="">Instagram</a>
             <a href="">Twitter</a>
@@ -16,9 +17,9 @@ const Footer = () => {
             <p href="" className="text-gray-400 cursor-pointer">
               Visit Store
             </p>
-            <a href="">Hire me</a>
-            <a href="">My Github</a>
-            <a href="">All Links</a>
+            <a href="mailto:hariskumar.eth@proton.me?subject=We%20are%20interested%20to%20hire%20you&body=Hey!%20I%2FWe%20have%20got%20a%20project%20idea%20and%20I%2FWe%20guess%20we%20could%20collaborate">Hire me</a>
+            <a href="https://github.com/hariseth">My Github</a>
+            <a href="https://links.haris.one">All Links</a>
           </div>
         </div>
         <hr className="w-full max-w-5xl" />
