@@ -63,9 +63,9 @@ const Loading = () => {
           }}
           
           className="App"
-          style={{ fontSize: 100 }}
+          
         >
-          <span  className="font-bold font-inter tracking-tight text-white">
+          <span  className="font-bold text-3xl md:text-7xl font-inter tracking-tight text-white">
             {texts[mainText]}{" "}
           </span>
         </motion.div>
