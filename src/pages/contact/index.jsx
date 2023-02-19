@@ -9,7 +9,7 @@ import { Input, Modal, useInput,Text , Row, Checkbox, Button , Textarea } from "
 
 
 
-const index = () => {
+const Loading = () => {
 
   const [senderName, setSenderName] = useState("");
   const [ message_value, setMessage] = useState("");
@@ -190,4 +190,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Loading;
