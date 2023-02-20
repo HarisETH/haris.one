@@ -1,8 +1,12 @@
 import React from "react";
 import * as Icon from 'react-feather';
 import Link from 'next/link'
+import {Text, Tooltip} from "@nextui-org/react"
 
 const Footer = () => {
+  const tooltText = (
+    <p className="font-inter font-medium w-max">Building in Progress 😎</p>
+  )
   return (
     <>
       <footer className="pt-12 px-8 font-inter text-lg flex flex-col md:px-32 justify-center items-center space-y-10">
@@ -14,9 +18,11 @@ const Footer = () => {
             <a href="">Twitter</a>
           </div>
           <div className="contact flex flex-col gap-3 font-bold text-lg items-end">
+            <Tooltip auto color={'secondary'}  content={tooltText}>
             <p href="" className="text-gray-400 cursor-pointer">
               Visit Store
             </p>
+            </Tooltip>
             <a href="mailto:hariskumar.eth@proton.me?subject=We%20are%20interested%20to%20hire%20you&body=Hey!%20I%2FWe%20have%20got%20a%20project%20idea%20and%20I%2FWe%20guess%20we%20could%20collaborate">Hire me</a>
             <a href="https://github.com/hariseth">My Github</a>
             <a href="https://links.haris.one">All Links</a>

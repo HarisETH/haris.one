@@ -11,7 +11,7 @@ const Socials = () => {
         </p>
         <div className="indicators flex flex-col gap-6 font-cormorant text-2xl font-semibold">
           <div className="instagram flex items-center justify-between">
-            <a href="">Instagram</a>
+            <a href="https://www.instagram.com/four39_codes">Instagram</a>
             <div className="flex items-center gap-2">
               <p>1500+</p>
               <div className="loader w-24 h-1.5 rounded-full bg-blue-200 relative">
@@ -20,7 +20,7 @@ const Socials = () => {
             </div>
           </div>
           <div className="twitter flex items-center justify-between">
-            <a href="">Twitter</a>
+            <a href="https://twitter.com/haris_eth">Twitter</a>
             <div className="flex items-center gap-2">
               <p>250+</p>
               <div className="loader w-24 h-1.5 rounded-full bg-blue-200 relative">
