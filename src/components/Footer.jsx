@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="pt-12 px-8 font-inter text-lg flex flex-col md:px-32 justify-center items-center space-y-10">
         <div className="flex justify-between items-center w-full md:max-w-5xl">
           <div className="contact flex flex-col gap-3">
-            <Link href={"/contact"} className="font-bold text-xl">Contact</Link>
+            <Link href={"/contact"} className="font-bold text-xl flex items-center justify-center   transition-all delay-100 ease-in hover:animate-pulxse group">Contact me <Icon.ArrowUpRight className="group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-105 transition-all delay-100 ease-in" ></Icon.ArrowUpRight> </Link>
             <a href="">E-Mail</a>
             <a href="">Instagram</a>
             <a href="">Twitter</a>
