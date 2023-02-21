@@ -9,7 +9,7 @@ import Hero from "@/components/Hero";
 import Socials from "@/components/Socials";
 import Current from "@/components/Current";
 import Footer from "@/components/Footer";
-import Loading from "./loading/Loading";
+
 import { useEffect, useState } from "react";
 
 
