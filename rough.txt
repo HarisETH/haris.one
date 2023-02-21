@@ -1,0 +1,73 @@
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+const index = () => {
+  const texts = ["வணக்கம் ", "Hey ", "नमस्ते", "مرحبًا", "你好", "வணக்கம்"];
+  const bgCodes = [
+    "bg-blue-600",
+    "bg-green-600",
+    "bg-red-400",
+    "bg-black",
+    "bg-purple-600",
+    "bg-blue-600",
+  ];
+
+  const [mainText, setMainText] = useState(0);
+  const [bgCode, setbgCode] = useState(0);
+  const [seconds, setSeconds] = useState(1);
+  const [bgclass, setbgclass] = useState("");
+
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  };
+
+  useEffect(() => {
+    
+    const wordTimeout = setInterval(() => {
+      setMainText((prevmainText) => (prevmainText + 1) % texts.length);
+      setbgCode((prevbgCode) => (prevbgCode + 1) % bgCodes.length);
+    }, 200);
+
+    setTimeout(function () {
+      clearInterval(wordTimeout);
+      setSeconds(100)
+      
+    }, 1200);
+
+    setTimeout(function () {
+        setbgclass('opacity-0')
+        
+      }, 1600);
+
+    //     console.log(seconds)
+    // }
+  }, []);
+
+  return (
+    <section
+      className={`flex w-full transition-all ease-in-out delay-700 min-h-screen ${bgclass} justify-center items-center overflow-hidden  ${bgCodes[bgCode]}`}
+    >
+      <AnimatePresence mode="wait">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 0.5 },
+            scale: seconds
+            
+          }}
+          exit={{ scale: 2 }}
+          className="App"
+          style={{ fontSize: 100 }}
+        >
+          <span  className="font-bold font-inter tracking-tight text-white">
+            {texts[mainText]}{" "}
+          </span>
+        </motion.div>
+      </AnimatePresence>
+    </section>
+  );
+};
+
+export default index;
