@@ -1,15 +1,15 @@
 import React from "react";
 
-const Socials = () => {
+const Socials = ({ cormorant }) => {
   return (
     <div className="px-8 pt-20 flex flex-col md:pt-32 md:px-32 w-full justify-center items-center tracking-tighter gap-20">
       <div className="secondary-cover flex flex-col max-w-5xl gap-10">
         <h3 className="text-5xl font-black">My Digital Footprint</h3>
-        <p className="font-cormorant font-medium text-2xl">
+        <p className={`${cormorant.className} font-medium text-2xl`}>
           I’m a growing content creator who specializes in creating engaging and
           high-quality content across various platforms.
         </p>
-        <div className="indicators flex flex-col gap-6 font-cormorant text-2xl font-semibold">
+        <div className={`indicators flex flex-col gap-6 ${cormorant.className} text-2xl font-semibold`}>
           <div className="instagram flex items-center justify-between">
             <a href="https://www.instagram.com/four39_codes">Instagram</a>
             <div className="flex items-center gap-2">

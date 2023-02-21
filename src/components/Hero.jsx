@@ -3,7 +3,7 @@ import React from "react";
 // import { Close } from 'feather-icons-react';
 import * as Icon from 'react-feather';
 
-function Hero() {
+function Hero({ cormorant }) {
   return (
     <section className="px-8 pt-24 font-primary-light-theme flex flex-col gap-16 tracking-tighter pb-4 md:pt-32 md:px-32 w-full justify-center items-center">
       <h1 className="font-black text-5xl md:text-7xl max-w-5xl leading-none">
@@ -40,7 +40,7 @@ function Hero() {
       </div>
 
       <div className="intro flex flex-col gap-4 md:gap-5 w-full ">
-        <p className="intro font-cormorant text-2xl break-words md:text-2xl font-medium text-black ">
+        <p className={`intro ${cormorant.className} text-2xl break-words md:text-2xl font-medium text-black `}>
           I am a 18-year-old Physics student with a strong interest in web
           development and emerging technologies. I am also a content creator on
           Instagram and Twitter where I share my projects and explore the latest

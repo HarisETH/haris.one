@@ -8,12 +8,10 @@
 .tip-bg-light-theme{
     background-color: #171717;
 }
-.font-cormorant{
-    font-family: 'Cormorant' , serif;
-}
-.font-inter{
-    font-family: 'Inter', sans-serif;
-}
+/* .font-cormorant{
+    font-family: var('--cormorant-font');
+} */
+
 span{
     border: 0 !important;
 }
