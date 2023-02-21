@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Cormorant } from "@next/font/google";
 const cormorant = Cormorant({ subsets: ["latin"], variable: '--cormorant-font' });
-
+import { Inter } from "@next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 import styles from "@/styles/Home.module.css";
 import Hero from "@/components/Hero";
 import Socials from "@/components/Socials";
@@ -39,7 +40,7 @@ export default function Home() {
       <main className={`min-h-screen w-full antialiased font-inter`}>
         {/* <Loading /> */}
 
-        <section className={visib}>
+        <section className={inter.className}>
           <Hero cormorant={cormorant} />
 
           <Socials cormorant={cormorant} />
