@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useRef, useState, useEffect} from "react";
 import styles from "@/styles/Home.module.css";
 import * as Icon from "react-feather";
 import emailjs from '@emailjs/browser';
@@ -18,12 +18,16 @@ const Loading = () => {
 
   const [visible, setVisible] = useState(false);
   const handler = () => setVisible(true);
+  const [disabledText, setDisabled] = useState(true);
+  const [enableBtn, setenableBtn] = useState(false)
 
   const { value, reset, bindings } = useInput("");
   const validateEmail = (value) => {
     return value.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
   };
 
+ 
+  const isValid = validateEmail(value);
   const helper = React.useMemo(() => {
     setEmailId(value)
     if (!value)
@@ -31,7 +35,9 @@ const Loading = () => {
         text: "",
         color: "",
       };
-    const isValid = validateEmail(value);
+    
+
+    
     return {
       text: isValid ? "E-Mail looks great 😍" : "Enter a valid email 😏",
       color: isValid ? "success" : "error",
@@ -42,6 +48,18 @@ const Loading = () => {
     setVisible(false);
     console.log("closed");
   };
+
+
+  const btnHelper = useEffect(() => {
+
+    if(senderName.length < 1 || message_value.length < 1 || value.length<5){
+      setDisabled(true)
+      console.log('hello')
+    }else{
+      setDisabled(false)
+    }
+
+  }, [senderName, message_value, emailid])
 
 
 
@@ -61,6 +79,10 @@ const Loading = () => {
       "twitter_id": twitterid
     }
     
+
+    
+
+
     let service_id = "service_phfssuo";
     let template_id = "template_hp2x6yb";
     emailjs.send(service_id, template_id, template_params, process.env.EMAIL_KEY);
@@ -81,10 +103,10 @@ const Loading = () => {
 
         <section className="h-full flex flex-col w-full gap-20">
           <div className="gap-2">
-            <h1 className="fon font-black text-5xl md:text-7xl">
+            <h1 className="fon font-bold tracking-tighter text-4xl sm:text-5xl ">
               Love to hear from you
             </h1>
-            <h2 className="fon font-black text-5xl md:text-7xl">
+            <h2 className="fon font-bold tracking-tighter text-4xl sm:text-5xl ">
               Get in Touch 👋🏼
             </h2>
           </div>
@@ -101,7 +123,7 @@ const Loading = () => {
               clearable
               underlined
               required="true"
-              labelPlaceholder="Your Name"
+              labelPlaceholder="Your Name*"
             />
 
             <Input
@@ -116,7 +138,7 @@ const Loading = () => {
               clearable
               underlined
               required="true"
-              labelPlaceholder="Your E-Mail"
+              labelPlaceholder="Your E-Mail*"
             />
             <Input
             onChange={(e)=> {
@@ -133,15 +155,16 @@ const Loading = () => {
             <Textarea
             onChange={(e)=> {
               setMessage(e.target.value)
+              
             }}
             fullWidth
               underlined
               color="black"
-              labelPlaceholder="Your Message goes here"
+              labelPlaceholder="Your Message goes here*"
               maxRows={4}
             />
 
-            <button type="submit" className="w-full md:w-1/4 self-center md:self-start py-4 bg-black font-inter gap-2 text-white font-bold text-xl flex items-center justify-center hover:scale-95 transition-all ease-linear hover:shadow-sm hover:shadow-zinc-900">
+            <button disabled={disabledText} type="submit" className="w-full md:w-1/4 self-center md:self-start py-4 bg-black disabled:opacity-20 disabled:hover:scale-100 disabled:hover:shadow-none font-inter gap-2 text-white font-bold text-xl flex items-center justify-center hover:scale-95 transition-all ease-linear hover:shadow-sm hover:shadow-zinc-900">
               <span className="hover:drop-shadow-md hover:shadow-white">Send a Raven</span> <Icon.ArrowUpRight></Icon.ArrowUpRight>
             </button>
             
