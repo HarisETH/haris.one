@@ -3,7 +3,8 @@ import styles from "@/styles/Home.module.css";
 import * as Icon from "react-feather";
 import emailjs from '@emailjs/browser';
 // UI imports
-
+import { Inter } from "@next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 import { Input, Modal, useInput,Text , Row, Checkbox, Button , Textarea } from "@nextui-org/react";
 
 
@@ -97,7 +98,7 @@ const Loading = () => {
   
 
   return (
-    <main className="font-inter flex flex-col justify-center items-center px-4 m-0  h-full min-h-screen w-full py-24  ">
+    <main className={`flex flex-col justify-center items-center px-4 m-0  h-full min-h-screen w-full py-24 ${inter.className}`}>
       <section className="section flex justify-center items-center w-full md:max-w-5xl">
         
 

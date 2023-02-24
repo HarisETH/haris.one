@@ -43,7 +43,7 @@ const Footer = () => {
             </a>
             <a href="https://www.instagram.com/hariskumar.eth" className="p-2 rounded-full border-gray-200 flex justify-center items-center w-full h-full border-2">
               <Icon.Instagram className="h-4 w-4 md:w-7 md:h-7" />
-              <Icon.Figma></Icon.Figma>
+              
             </a>
           </div>
         </div>
