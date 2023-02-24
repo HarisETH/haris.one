@@ -41,13 +41,13 @@ export default function Home() {
         {/* <Loading /> */}
 
         <section className={inter.className}>
-          <Hero cormorant={cormorant} />
+          <Hero  />
 
-          <Socials cormorant={cormorant} />
+          <Socials  />
 
-          <Current cormorant={cormorant} />
+          <Current  />
 
-          <Footer cormorant={cormorant} />
+          <Footer  />
         </section>
       </main>
     </>
