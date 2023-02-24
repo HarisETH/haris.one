@@ -97,7 +97,7 @@ const Loading = () => {
   
 
   return (
-    <main className="font-inter flex flex-col justify-center items-center px-4 m-0  h-full min-h-screen w-full py-24  ">
+    <main className={`flex flex-col justify-center items-center px-4 m-0  h-full min-h-screen w-full py-24 font-inter`}>
       <section className="section flex justify-center items-center w-full md:max-w-5xl">
         
 
