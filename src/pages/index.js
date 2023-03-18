@@ -37,10 +37,10 @@ export default function Home() {
         
       </Head>
 
-      <main className={`min-h-screen w-full antialiased font-inter`}>
+      <main className={`min-h-screen w-full antialiased `}>
         {/* <Loading /> */}
 
-        <section className={inter.className}>
+        <section className={`font-inter`}>
           <Hero  />
 
           <Socials  />
